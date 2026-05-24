@@ -1,3 +1,5 @@
+import 'package:dlfhub_app_finance_hub/core/theme/app_colors.dart';
+import 'package:dlfhub_app_finance_hub/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -6,12 +8,34 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          'Welcome to the Finance Hub App!',
-          style: TextStyle(fontSize: 24, color: Colors.white),
-        ),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60),
+        child: const CustomAppBar(),
       ),
+      body: ListView(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height:  600,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryColor,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),  
+                  ),
+                ],
+              ),
+            )
+          )
+        ]
+      )
     );
   }
 }
