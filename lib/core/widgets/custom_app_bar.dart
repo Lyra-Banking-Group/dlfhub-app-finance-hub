@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
           ),
           const SizedBox(width: 48),
           const Text(
-            'Darth Lyra Banking Group',
+            'Darth Lyra Banking Group - Deploy Teste',
             style: AppTextStyles.titleAppBar,
           ),
         ],
